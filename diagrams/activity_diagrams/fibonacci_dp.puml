@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Check if n < 0?;
+if (yes) then (true)
+  :Throw IllegalArgumentException;
+else (no)
+  :Check if n <= 1?;
+  if (yes) then (true)
+    :Return n;
+  else (no)
+    :Check if MEMO contains n?;
+    if (yes) then (true)
+      :Return MEMO[n];
+    else (no)
+      :fib = fibonacci(n - 1) + fibonacci(n - 2);
+      :Store fib in MEMO;
+      :Return fib;
+    endif
+  endif
+endif
+stop
+@enduml

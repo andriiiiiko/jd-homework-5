@@ -5,7 +5,7 @@ public class FibonacciIteration implements Fibonacci{
     @Override
     public long fibonacci(int n) {
         if (n < 0) {
-            throw new IllegalArgumentException("Invalid number entered");
+            throw new IllegalArgumentException("Invalid number entered!");
         } else if (n <= 1) {
             return n;
         }
