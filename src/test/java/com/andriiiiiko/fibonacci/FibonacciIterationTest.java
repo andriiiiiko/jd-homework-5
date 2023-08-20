@@ -23,10 +23,10 @@ class FibonacciIterationTest {
     void testFibonacci() {
         // Given
         FibonacciIteration fibonacciIteration = new FibonacciIteration();
-        int n = 25;
+        int number = 25;
 
         // When
-        long result = fibonacciIteration.fibonacci(n);
+        long result = fibonacciIteration.fibonacci(number);
 
         // Then
         long expected = 75025;
@@ -37,10 +37,10 @@ class FibonacciIterationTest {
     void testInputIsZero() {
         // Given
         FibonacciIteration fibonacciIteration = new FibonacciIteration();
-        int n = 0;
+        int number = 0;
 
         // When
-        long result = fibonacciIteration.fibonacci(n);
+        long result = fibonacciIteration.fibonacci(number);
 
         // Then
         long expected = 0;
@@ -51,10 +51,10 @@ class FibonacciIterationTest {
     void testInputIsOne() {
         // Given
         FibonacciIteration fibonacciIteration = new FibonacciIteration();
-        int n = 1;
+        int number = 1;
 
         // When
-        long result = fibonacciIteration.fibonacci(n);
+        long result = fibonacciIteration.fibonacci(number);
 
         // Then
         long expected = 1;
@@ -65,9 +65,9 @@ class FibonacciIterationTest {
     void testNegativeInput() {
         // Given
         FibonacciIteration fibonacciIteration = new FibonacciIteration();
-        int n = -5;
+        int number = -5;
 
         // When & Then
-        assertThrows(IllegalArgumentException.class, () -> fibonacciIteration.fibonacci(n));
+        assertThrows(IllegalArgumentException.class, () -> fibonacciIteration.fibonacci(number));
     }
 }

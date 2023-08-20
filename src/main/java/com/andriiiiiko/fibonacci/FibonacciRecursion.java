@@ -3,13 +3,13 @@ package com.andriiiiiko.fibonacci;
 public class FibonacciRecursion implements Fibonacci {
 
     @Override
-    public long fibonacci(int n) {
-        if (n < 0) {
+    public long fibonacci(int number) {
+        if (number < 0) {
             throw new IllegalArgumentException("Invalid number entered!");
-        } else if (n <= 1) {
-            return n;
+        } else if (number <= 1) {
+            return number;
         }
 
-        return fibonacci(n - 1) + fibonacci(n - 2);
+        return fibonacci(number - 1) + fibonacci(number - 2);
     }
 }

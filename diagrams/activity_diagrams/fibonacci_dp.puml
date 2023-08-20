@@ -2,19 +2,19 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-:Check if n < 0?;
+:Check if number < 0?;
 if (yes) then (true)
   :Throw IllegalArgumentException;
 else (no)
-  :Check if n <= 1?;
+  :Check if number <= 1?;
   if (yes) then (true)
-    :Return n;
+    :Return number;
   else (no)
-    :Check if MEMO contains n?;
+    :Check if MEMO contains number?;
     if (yes) then (true)
-      :Return MEMO[n];
+      :Return MEMO[number];
     else (no)
-      :fib = fibonacci(n - 1) + fibonacci(n - 2);
+      :fib = fibonacci(number - 1) + fibonacci(number - 2);
       :Store fib in MEMO;
       :Return fib;
     endif

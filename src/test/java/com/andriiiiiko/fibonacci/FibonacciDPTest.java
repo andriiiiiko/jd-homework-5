@@ -23,10 +23,10 @@ class FibonacciDPTest {
     void testFibonacci() {
         // Given
         FibonacciDP fibonacciDP = new FibonacciDP();
-        int n = 25;
+        int number = 25;
 
         // When
-        long result = fibonacciDP.fibonacci(n);
+        long result = fibonacciDP.fibonacci(number);
 
         // Then
         long expected = 75025;
@@ -37,10 +37,10 @@ class FibonacciDPTest {
     void testInputIsZero() {
         // Given
         FibonacciDP fibonacciDP = new FibonacciDP();
-        int n = 0;
+        int number = 0;
 
         // When
-        long result = fibonacciDP.fibonacci(n);
+        long result = fibonacciDP.fibonacci(number);
 
         // Then
         long expected = 0;
@@ -51,10 +51,10 @@ class FibonacciDPTest {
     void testInputIsOne() {
         // Given
         FibonacciDP fibonacciDP = new FibonacciDP();
-        int n = 1;
+        int number = 1;
 
         // When
-        long result = fibonacciDP.fibonacci(n);
+        long result = fibonacciDP.fibonacci(number);
 
         // Then
         long expected = 1;
@@ -65,9 +65,9 @@ class FibonacciDPTest {
     void testNegativeInput() {
         // Given
         FibonacciDP fibonacciDP = new FibonacciDP();
-        int n = -5;
+        int number = -5;
 
         // When & Then
-        assertThrows(IllegalArgumentException.class, () -> fibonacciDP.fibonacci(n));
+        assertThrows(IllegalArgumentException.class, () -> fibonacciDP.fibonacci(number));
     }
 }

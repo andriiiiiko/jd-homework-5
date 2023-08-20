@@ -8,19 +8,19 @@ public class FibonacciDP implements Fibonacci {
     private static final Map<Integer, Long> MEMO = new HashMap<>();
 
     @Override
-    public long fibonacci(int n) {
-        if (n < 0) {
+    public long fibonacci(int number) {
+        if (number < 0) {
             throw new IllegalArgumentException("Invalid number entered!");
-        } else if (n <= 1) {
-            return n;
+        } else if (number <= 1) {
+            return number;
         }
 
-        if (MEMO.containsKey(n)) {
-            return MEMO.get(n);
+        if (MEMO.containsKey(number)) {
+            return MEMO.get(number);
         }
 
-        long fib = fibonacci(n - 1) + fibonacci(n - 2);
-        MEMO.put(n, fib);
+        long fib = fibonacci(number - 1) + fibonacci(number - 2);
+        MEMO.put(number, fib);
         return fib;
     }
 }

@@ -23,10 +23,10 @@ class FibonacciRecursionTest {
     void testFibonacci() {
         // Given
         FibonacciRecursion fibonacciRecursion = new FibonacciRecursion();
-        int n = 25;
+        int number = 25;
 
         // When
-        long result = fibonacciRecursion.fibonacci(n);
+        long result = fibonacciRecursion.fibonacci(number);
 
         // Then
         long expected = 75025;
@@ -37,10 +37,10 @@ class FibonacciRecursionTest {
     void testInputIsZero() {
         // Given
         FibonacciRecursion fibonacciRecursion = new FibonacciRecursion();
-        int n = 0;
+        int number = 0;
 
         // When
-        long result = fibonacciRecursion.fibonacci(n);
+        long result = fibonacciRecursion.fibonacci(number);
 
         // Then
         long expected = 0;
@@ -51,10 +51,10 @@ class FibonacciRecursionTest {
     void testInputIsOne() {
         // Given
         FibonacciRecursion fibonacciRecursion = new FibonacciRecursion();
-        int n = 1;
+        int number = 1;
 
         // When
-        long result = fibonacciRecursion.fibonacci(n);
+        long result = fibonacciRecursion.fibonacci(number);
 
         // Then
         long expected = 1;
@@ -65,9 +65,9 @@ class FibonacciRecursionTest {
     void testNegativeInput() {
         // Given
         FibonacciRecursion fibonacciRecursion = new FibonacciRecursion();
-        int n = -5;
+        int number = -5;
 
         // When & Then
-        assertThrows(IllegalArgumentException.class, () -> fibonacciRecursion.fibonacci(n));
+        assertThrows(IllegalArgumentException.class, () -> fibonacciRecursion.fibonacci(number));
     }
 }

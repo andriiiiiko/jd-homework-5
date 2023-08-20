@@ -2,18 +2,18 @@
 'https://plantuml.com/activity-diagram-beta
 
 start
-:Check if n < 0?;
+:Check if number < 0?;
 if (yes) then (true)
   :Throw IllegalArgumentException;
 else (no)
-  :Check if n <= 1?;
+  :Check if number <= 1?;
   if (yes) then (true)
-    :Return n;
+    :Return number;
   else (no)
     :previous = 0;
     :current = 1;
     :i = 2;
-    while (i <= n) is (true)
+    while (i <= number) is (true)
       :next = previous + current;
       :previous = current;
       :current = next;
